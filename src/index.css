@@ -50,9 +50,9 @@ body {
   color: black;
 }
 
-body.dark .add-input,
+.add-input,
 .toDoBox,
-body.dark .task-item,
+.task-item,
 .night {
   background: rgba(255, 255, 255, 0.01);
   border-radius: 10px;
