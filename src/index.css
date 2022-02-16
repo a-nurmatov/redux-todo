@@ -1,13 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body.dark {
+  background-image: linear-gradient(
+    to right bottom,
+    #141d39,
+    #151c35,
+    #151b31,
+    #161a2e,
+    #16192a,
+    #171a2e,
+    #181b32,
+    #191c36,
+    #1c1f43,
+    #202150,
+    #27225d,
+    #2f2369
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #e0e3ec,
+    #e3e5ee,
+    #e6e7f0,
+    #e8eaf2,
+    #ebecf4,
+    #ededf5,
+    #eeeff6,
+    #f0f0f7,
+    #f1f1f8,
+    #f2f1f9,
+    #f3f2fa,
+    #f4f2fb
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: black;
+}
+
+.toDoBox {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.6px);
+  -webkit-backdrop-filter: blur(4.6px);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  min-width: 300px;
+}
+
+textarea {
+  resize: none;
+}
+
+.App {
+  overflow: auto;
+  height: 95vh;
 }

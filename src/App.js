@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import ToDoBox from './components/ToDoBox';
+import { useSelector, useDispatch } from 'react-redux';
+import NewBox from './components/newBox';
 
 function App() {
+  let categories = useSelector((state) => state.categories);
+  let tasks = useSelector((state) => state.tasks)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className='text-4xl mt-5 ml-10'>To-Dos</h1>
+      <div className="App flex items-start gap-4 px-10 pt-5">
+        {
+          categories.map((name, i) => {
+            let allTasks = tasks[i];
+            return (
+              <ToDoBox key={name} name={name} tasksList={allTasks} idCat={i} />
+            )
+          })
+        }
+        <NewBox newCatId={categories.length} />
+      </div>
     </div>
   );
 }
