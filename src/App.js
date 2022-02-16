@@ -1,5 +1,5 @@
 import ToDoBox from './components/ToDoBox';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import NewBox from './components/newBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
