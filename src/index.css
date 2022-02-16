@@ -3,6 +3,7 @@
 @tailwind utilities;
 body {
   overflow: hidden;
+  transition: all 0.3s;
 }
 
 body.dark {
@@ -49,14 +50,19 @@ body {
   color: black;
 }
 
-.toDoBox {
-  /* From https://css.glass */
+body.dark .add-input,
+.toDoBox,
+body.dark .task-item,
+.night {
   background: rgba(255, 255, 255, 0.01);
-  border-radius: 16px;
+  border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.6px);
   -webkit-backdrop-filter: blur(4.6px);
   border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.toDoBox {
   min-width: 300px;
 }
 

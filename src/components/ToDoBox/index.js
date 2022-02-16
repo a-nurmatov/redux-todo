@@ -19,7 +19,7 @@ function TaskItem({ task, taskId, ...props }) {
     setIsEdit((state) => state ? false : true)
   }
   return (
-    <li draggable={true} key={taskId} title={task.deadline.toString()} className='w-full flex items-start bg-lime-50 p-3 mb-2 rounded-lg'>
+    <li draggable={true} key={taskId} title={task.deadline.toString()} className='task-item w-full flex items-start bg-lime-50 p-3 mb-2 rounded-lg'>
       <input value={newTask} onChange={(e) => setNewTask(e.target.value)} ref={elementRef} readOnly={isEdit ? false : true} type="text" className='w-full bg-transparent outline-none' />
       {isEdit ? <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-green-600 bg-green-500 text-white px-1.5 pt-1 pb-1.5 text-xs ml-1'><FontAwesomeIcon icon={faCheck} /></button> :
         <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-yellow-600 bg-yellow-500 text-white px-1.5 pt-1 pb-1.5 text-xs ml-1'><FontAwesomeIcon icon={faPen} /></button>}
@@ -43,7 +43,7 @@ export default function ToDoBox({ tasksList, name, ...props }) {
     <div className='toDoBox p-5'>
       <h1 className='mb-2 pl-0.5'>{name}</h1>
       <div className='flex items-center'>
-        <input type="text" ref={elementRef} placeholder='Enter task here' onChange={(e) => setNewTask(e.target.value)} className='w-full px-2 py-2 rounded-lg outline-none' />
+        <input type="text" ref={elementRef} placeholder='Enter task here' onChange={(e) => setNewTask(e.target.value)} className='add-input w-full px-2.5 py-2 rounded-lg outline-none' />
         <button onClick={(e) => addTask(e)} className='rounded-lg hover:bg-green-600 bg-green-500 text-white px-2.5 py-2.5 text-sm ml-2'>Add</button>
       </div>
       <ul className='mt-3'>
