@@ -21,9 +21,9 @@ function TaskItem({ task, taskId, ...props }) {
   return (
     <li draggable={true} key={taskId} title={task.deadline.toString()} className='task-item w-full flex items-start bg-lime-50 p-3 mb-2 rounded-lg'>
       <input value={newTask} onChange={(e) => setNewTask(e.target.value)} ref={elementRef} readOnly={isEdit ? false : true} type="text" className='w-full bg-transparent outline-none' />
-      {isEdit ? <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-green-600 bg-green-500 text-white px-1.5 pt-1 pb-1 text-xs ml-1'><FontAwesomeIcon icon={faCheck} /></button> :
-        <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-yellow-600 bg-yellow-500 text-white px-1.5 pt-1 pb-1 text-xs ml-1'><FontAwesomeIcon icon={faPen} /></button>}
-      <button onClick={() => deleteTask(taskId)} className='rounded-lg hover:bg-red-600 bg-red-500 text-white px-1.5 pt-1 pb-1 text-xs ml-1'><FontAwesomeIcon icon={faTrash} /></button>
+      {isEdit ? <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-green-600 bg-green-500 text-white px-1.5 py-1 text-xs ml-1'><FontAwesomeIcon icon={faCheck} /></button> :
+        <button onClick={() => editTask(taskId)} className='rounded-lg hover:bg-yellow-600 bg-yellow-500 text-white px-1.5 py-1 text-xs ml-1'><FontAwesomeIcon icon={faPen} /></button>}
+      <button onClick={() => deleteTask(taskId)} className='rounded-lg hover:bg-red-600 bg-red-500 text-white px-1.5 py-1 text-xs ml-1'><FontAwesomeIcon icon={faTrash} /></button>
     </li>
   )
 }

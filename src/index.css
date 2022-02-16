@@ -64,6 +64,7 @@ body.dark .task-item,
 
 .toDoBox {
   min-width: 300px;
+  width: 300px;
 }
 
 textarea {
